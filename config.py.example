@@ -1,0 +1,23 @@
+""" Configuration File """
+from time import strftime
+
+LOG_RUN_DATE = strftime("%d%m%Y-%H%M%S")
+
+# Service Endpoint confg
+SERVER_ADR = "192.168.1.1"
+SERVICE_ACTION_HANDSET = "/servicename/service?wsdl"
+SERVICE_ACTION_MANAGEMENT = "/servicename/servicename?wsdl"
+
+# Log files
+LOG_ROUTE = ("log/blockedHandset_{runtime}.log").format(runtime=LOG_RUN_DATE)
+
+# Process files
+IMEI_ROUTE = "resources/compiled/compiled{runtime}.csv".format(runtime=LOG_RUN_DATE)
+REGIS_ONLY_FILE = "resources/compiled/compiled{runtime}regonly.csv".format(runtime=LOG_RUN_DATE)
+
+# Database Conn
+HOST = "127.0.0.1"
+PORT = "12345"
+DBNAME = "def"
+USER = "def"
+PASSWORD = "def"
